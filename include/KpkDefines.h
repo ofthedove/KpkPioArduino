@@ -19,4 +19,6 @@
 #define KPK_BTN_A_PIN      23    // Button A pin
 #define KPK_BTN_NONE_PIN   5     // Small button on the back of the board labelled BM1
 
+#define KPK_SPK_PIN        22    // Built in speaker
+
 #endif // KPK_DEFINES_H

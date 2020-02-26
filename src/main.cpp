@@ -63,6 +63,8 @@ void ButtonProgram_Run()
   if(!digitalRead(KPK_BTN_A_PIN))
   {
     strip.setPixelColor(gridPin(2, 14), strip.Color(255, 255, 255));
+    // noTone(KPK_SPK_PIN);
+    // tone(KPK_SPK_PIN, 440, 200);
   }
 
   if(!digitalRead(KPK_BTN_NONE_PIN))
@@ -109,6 +111,9 @@ void setup() {
   pinMode(KPK_JOY_LEFT_PIN, INPUT_PULLUP);
   pinMode(KPK_JOY_RIGHT_PIN, INPUT_PULLUP);
   pinMode(KPK_JOY_DOWN_PIN, INPUT_PULLUP);
+
+  // ledcSetup(1, 2000, 8);
+  // ledcAttachPin(22, 1);
 }
 
 void loop() {
@@ -121,4 +126,8 @@ void loop() {
 
   NeoPixels_Show();
   delay(5);
+
+  // ledcWriteTone(0, 440);
+  // ledcWrite(1, 127);
+  // delay(200);
 }
